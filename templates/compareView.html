@@ -1,0 +1,79 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="styles.css" type="text/css" />
+		<meta charset="utf-8">
+		<title>Comparing Report </title>
+	</head>
+	<body>
+		<div class="header">
+			<h1 class="heading"> <a href="/">GPU Information</a> </h1>
+			<div class="login-logout-box">
+			<div class="user-info">
+	
+			</div>
+			<div class="login-info"><a href='{{ logout_url }}'>Logout</a></div>
+			</div>
+		</div>
+		
+		<div class="main-container">
+			<div class="menu">
+				<ul>
+ 					<li><a href="/">Add</a></li>
+  					<li><a href="/view">View</a></li>
+					<li><a href="/viewfeatures">View by Features</a></li>
+  					<li><a href="/compare">Compare</a></li>
+				</ul>
+			</div>
+			<div class="message">{{ message }}</div>
+			<div class="view-title">Comparing report of <i>{{ value1 }}</i> and <i>{{ value2 }}</i></div>
+			
+			<div class="table-view">
+				<div class="left-box">
+					<div class="text">devicename</div>
+					<div class="text">manufacturer</div>
+					<div class="text">dateissued</div>
+					<div class="text">geometryShader</div>
+					<div class="text">tesselationShader</div>
+					<div class="text">shaderInt16</div>
+					<div class="text">sparseBinding</div>
+					<div class="text">textureCompressionETC2</div>
+					<div class="text">vertexPipelineStoresAndAtomics</div>
+				</div>
+				{% for i in gpulist %}
+				<div class="right-box">
+					<div class="value">{{ i.devicename }}</div>
+					<div class="value">{{ i.manufacturer }}</div>
+					<div class="value">{{ i.dateissued }}</div>
+					{% if i.geometryShader==True %}<div class="value-green">{{ i.geometryShader }}</div>
+					{% else %}
+					<div class="value-red">{{ i.geometryShader }}</div>
+					{% endif %}
+					{% if i.tesselationShader==True %}<div class="value-green">{{ i.tesselationShader }}</div>
+					{% else %}
+					<div class="value-red">{{ i.tesselationShader }}</div>
+					{% endif %}
+					{% if i.shaderInt16==True %}<div class="value-green">{{ i.shaderInt16 }}</div>
+					{% else %}
+					<div class="value-red">{{ i.shaderInt16 }}</div>
+					{% endif %}
+					{% if i.sparseBinding==True %}<div class="value-green">{{ i.sparseBinding }}</div>
+					{% else %}
+					<div class="value-red">{{ i.sparseBinding }}</div>
+					{% endif %}
+					{% if i.textureCompressionETC2==True %}<div class="value-green">{{ i.textureCompressionETC2 }}</div>
+					{% else %}
+					<div class="value-red">{{ i.textureCompressionETC2 }}</div>
+					{% endif %}
+					{% if i.vertexPipelineStoresAndAtomics==True %}<div class="value-green">{{ i.vertexPipelineStoresAndAtomics }}</div>
+					{% else %}
+					<div class="value-red">{{ i.vertexPipelineStoresAndAtomics }}</div>
+					{% endif %}
+					
+				</div>
+				{% endfor %}
+			</div>			
+			
+		</div>
+
+	</body>
+</html>

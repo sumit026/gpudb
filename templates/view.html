@@ -1,0 +1,67 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="styles.css" type="text/css" />
+		<meta charset="utf-8">
+		<title>View</title>
+	</head>
+	<body>
+		<div class="header">
+			<h1 class="heading"> <a href="/">GPU Information</a> </h1>
+			<div class="login-logout-box">
+			<div class="user-info">
+	
+			</div>
+			<div class="login-info"><a href='{{ logout_url }}'>Logout</a></div>
+			</div>
+		</div>
+		
+		<div class="main-container">
+			<div class="menu">
+				<ul>
+ 					<li><a href="/">Add</a></li>
+  					<li><a class="active" href="/view">View</a></li>
+					<li><a href="/viewfeatures">View by Features</a></li>
+  					<li><a href="/compare">Compare</a></li>
+				</ul>
+			</div>
+			<div class="view-title">List of all GPU</div>
+			<table class="show-value">
+
+
+				<thead>
+					<th>ID</th>
+					<th>devicename</th>
+					<th>manufacturer</th>
+					<th>dateissued</th>
+					<th>geometryShader</th>
+					<th>tesselationShader</th>
+					<th>Action</th>
+				</thead>
+
+				
+					{% for i in gpulist %}
+				<tr>
+					<td>{{ loop.index }}</td>
+					<td><a href="/viewgpu?name={{ i.devicename }}">{{ i.devicename }}</a></td>
+					<td>{{ i.manufacturer }}</td>
+					<td>{{ i.dateissued }}</td>
+					<td>{{ i.geometryShader }}</td>
+					<td>{{ i.tesselationShader }}</td>
+					<td>
+						<form action="/" method="post">
+							<input type="hidden" name="index" value="{{ loop.index - 1 }}"/>
+							<div class="del-button"><input type="submit" value="Delete" name="button"/></div>
+						</form>
+						<div class="update-button"><a href="/edit?name={{ i.devicename }}">Update</a></div>
+					</td>
+				</tr>
+				{% endfor %}
+				
+
+			</table>
+			
+			
+		</div>
+
+	</body>
+</html>

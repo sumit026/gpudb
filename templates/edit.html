@@ -1,0 +1,94 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="styles.css" type="text/css" />
+		<meta charset="utf-8">
+		<title>Update GPU</title>
+	</head>
+	<body>
+		<div class="header">
+			<h1 class="heading"> <a href="/">GPU Information</a> </h1>
+			<div class="login-logout-box">
+			<div class="user-info">
+	
+			</div>
+			<div class="login-info"><a href='{{ logout_url }}'>Logout</a></div>
+			</div>
+		</div>
+		
+		<div class="main-container">
+			<div class="menu">
+				<ul>
+ 					<li><a href="/">Add</a></li>
+  					<li><a href="/view">View</a></li>
+					<li><a href="/viewfeatures">View by Features</a></li>
+  					<li><a href="/compare">Compare</a></li>
+				</ul>
+			</div>
+			<div class="form-title">Update GPU Information Below</div>
+			{% for i in data %}
+			{% if i.devicename == name %}
+			<div class="gpu-form">
+			<form action="/edit" method="post">
+				<div class="text">Device Name</div> 
+				<div class="input"><input type="text" name="devicename" value="{{ i.devicename }}" readonly/></div>
+
+				<div class="text">Manufacturer</div> 
+				<div class="input"><input type="text" name="manufacturer" value="{{ i.manufacturer }}" required/></div>
+
+				<div class="text">Date Issued</div> 
+				<div class="input"><input type="date" name="dateissued" placeholder="YYYY-MM-DD" required value="{{ i.dateissued }}""/></div>
+				<div class="in-form-partition"></div>
+				
+
+				<div class="in-form-text">Add Features to GPU</div>
+
+				<div class="text">geometryShader</div> 
+				<div class="input">
+					<input type="checkbox" name="geometryShader" {% if i.geometryShader==True %}{{ check }}{% endif %}/>
+				
+				</div>
+
+				<div class="text">tesselationShader</div> 
+				<div class="input">
+					<input type="checkbox" name="tesselationShader" {% if i.tesselationShader==True %}{{ check }}{% endif %}/>
+					
+				</div>
+
+				<div class="text">shaderInt16</div> 
+				<div class="input">
+					<input type="checkbox" name="shaderInt16" {% if i.shaderInt16==True %}{{ check }}{% endif %}/>
+					
+				</div>
+
+				<div class="text">sparseBinding</div> 
+				<div class="input">
+					<input type="checkbox" name="sparseBinding" {% if i.sparseBinding==True %}{{ check }}{% endif %}/>
+					
+				</div>
+
+				<div class="text">textureCompressionETC2</div> 
+				<div class="input">
+					<input type="checkbox" name="textureCompressionETC2" {% if i.textureCompressionETC2==True %}{{ check }}{% endif %}/>
+					
+				</div>
+
+				<div class="text">vertexPipelineStoresAndAtomics</div> 
+				<div class="input">
+				<input type="checkbox" name="vertexPipelineStoresAndAtomics" {% if i.vertexPipelineStoresAndAtomics==True %}{{ check }}{% endif %}/>
+					
+				</div>
+				<div class="button"><input type="submit" name="button" value="Update GPU"/></div>
+			</form>
+			
+			<form method="post" action="/edit">
+				<div class="cancel-button"><input type="submit" value="Cancel" name="button"/></div>
+			</form>
+			</div>
+			{% endif %} 
+			{% endfor %}
+			
+			
+		</div>
+
+	</body>
+</html>

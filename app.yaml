@@ -1,0 +1,19 @@
+runtime: python27
+api_version: 1
+threadsafe: true
+
+libraries:
+- name: webapp2
+  version: latest
+- name: jinja2
+  version: latest
+- name: ssl
+  version: latest
+
+handlers:
+- url: /styles\.css
+  static_files: styles.css
+  upload: styles\.css
+
+- url: /.*
+  script: main.app

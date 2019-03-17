@@ -1,0 +1,588 @@
+body {
+background:#00000008; 
+background-size:100% auto;
+color:#000;
+font-family:Arial, Helvetica, sans-serif;
+margin:0px;
+}
+
+.header{
+width:100%;
+height:50px;
+background:#000;
+color:#fff;
+font-size:14px;
+padding-bottom: 15px;
+}
+
+h1.heading{
+margin-left: 5px;
+float:left;
+width:auto;
+}
+
+h1.heading a:link{
+color:#fff;
+text-decoration:none;
+}
+h1.heading a:visited{
+color:#fff;
+text-decoration:none;
+}
+
+h1.heading a:hover{
+color:#fff;
+text-decoration:none;
+}
+
+.login-logout-box{
+width:auto;
+float:right;
+margin-top:10px;
+margin-right:10px;
+}
+
+.user-info{
+color:#fff;
+width:auto;
+height:auto;
+margin-top:5px;
+font-size:14px;
+}
+
+.login-info{
+color: #000;
+font-size: 15px;
+margin-top: 5px;
+float: right;
+margin-right: 20px;
+background: #fff;
+padding: 6px;
+border: 1px solid;
+border-radius: 5px;
+cursor: pointer;
+}
+
+.login-info a:link{
+color:#000;
+text-decoration:none;
+}
+
+.login-info a:visited{
+color:#000;
+text-decoration:none;
+}
+
+.login-info a:hover{
+text-decoration:none;
+}
+
+.main-container{
+width:960px;
+height:auto;
+margin:auto;
+background:#fff;
+float:left;
+padding-bottom:100px;
+min-height:960px;
+}
+
+.menu{
+width:100%;
+float:left;
+height:auto;
+}
+
+.menu ul{
+list-style-type: none;
+margin: 0;
+padding: 0;
+overflow: hidden;
+background-color: #333;
+}
+
+.menu ul li{
+float:left;
+}
+
+.menu ul li a{
+display: block;
+color: #fff;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+}
+
+.menu ul li a:hover{
+background-color: #111;
+}
+
+.menu ul li a.active{
+background-color: #111;
+}
+
+.message{
+color:red;
+font-size:17px;
+float:left;
+margin-top:20px;
+margin-left:20px;
+width:100%;
+}
+.message a:link{
+color:red;
+text-decoration:none;
+}
+.message a:visited{
+color:red;
+text-decoration:none;
+}
+.message a:hover{
+text-decoration:underline;
+}
+
+.view-title{
+font-weight: bold;
+float: left;
+font-size: 16px;
+margin-top: 20px;
+margin-left: 15px;
+margin-bottom: 20px;
+}
+
+.login-container{
+width:35%;
+height:auto;
+float:left;
+margin-left:30%;
+margin-top: 40px;
+}
+
+.login-container .text{
+font-size:20px;
+color:#000;
+margin-top:15px;
+margin-bottom:25px;
+font-weight:bold;
+text-align:center;
+}
+
+.login-container .form-text{
+font-size:15px;
+color:#000;
+font-weight:bold;
+margin-top:10px;
+}
+
+.login-container .input{
+font-size:15px;
+margin-top:10px;
+margin-bottom:10px;
+}
+
+.input input{
+width:250px;
+height:30px;
+border-radius:5px;
+}
+
+.login-container .button{
+width: 80px;
+height: 35px;
+background-color: #000;
+color: #fff;
+font-size: 16px;
+border: 0;
+border-radius: 5px;
+cursor: pointer;
+}
+
+.not-registered a:link{
+text-decoration:none;
+color:#000;
+}
+.not-registered a:visited{
+text-decoration:none;
+color:#000;
+}
+
+.not-registered a:hover{
+text-decoration:underline;
+}
+
+.signup-container{
+width:auto;
+float:left;
+margin-left:30px;
+}
+
+.signup-container .text{
+font-size:17px;
+font-weight:bold;
+margin-bottom:20px;
+}
+
+.signup-container .form-text{
+font-size:16px;
+margin-bottom:5px;
+}
+
+.signup-container .input-signup{
+margin-top:10px;
+margin-bottom:10px;
+}
+
+.input-signup input{
+width:280px;
+height:30px;
+font-size:16px;
+}
+
+.signup-container .button{
+width:100px;
+height:35px;
+background-color:#000;
+color:#fff;
+font-size:16px;
+border:0;
+border-radius:4px;
+margin-top:10px;
+cursor:pointer;
+}
+
+.form-title{
+font-size:19px;
+color:#000;
+margin-top:15px;
+margin-bottom:15px;
+margin-left:15px;
+float:left;
+font-weight:bold;
+}
+
+.gpu-form{
+width:100%;
+height:auto;
+float:left;
+}
+
+.gpu-form .text{
+font-size:16px;
+color:#000;
+float:left;
+width:45%;
+margin-left:30px;
+margin-bottom:20px;
+}
+
+.gpu-form .input{
+width:50%;
+float:left;
+margin-bottom:15px;
+}
+
+.gpu-form .input input{
+width: 350px;
+font-size: 16px;
+border-radius: 5px;
+height: 32px;
+}
+
+.gpu-form .input .check-text{
+float:left;
+font-size:16px;
+}
+
+.gpu-form .in-form-partition{
+width:85%;
+margin-top:15px;
+border-top: 1px solid #000;
+margin-bottom:10px;
+float:left;
+margin-left:20px;
+}
+
+.gpu-form .in-form-text{
+font-size:16px;
+font-weight:bold;
+color:#000;
+float:left;
+width:100%;
+margin-left:25px;
+margin-bottom:15px;
+}
+
+.gpu-form .input input[type="checkbox"]{
+width: 35px;
+font-size: 16px;
+border-radius: 5px;
+height: 15px;
+margin-left: 8px;
+margin-right:28px;
+margin-bottom:10px;
+float: left;
+}
+
+.gpu-form .button input{
+width:130px;
+height:35px;
+background-color:#000;
+color:#fff;
+font-size:16px;
+border:0;
+border-radius:4px;
+margin-top:10px;
+cursor:pointer;
+float:left;
+margin-left:20px;
+}
+
+.gpu-form .cancel-button input{
+width:130px;
+height:35px;
+background-color:#000;
+color:#fff;
+font-size:16px;
+border:0;
+border-radius:4px;
+margin-top:10px;
+cursor:pointer;
+float:left;
+margin-left:20px;
+}
+
+.partition{
+width:100%;
+margin-top:25px;
+border-top: 1px solid #000;
+margin-bottom:25px;
+float:left;
+}
+
+.show-title{
+font-size:17px;
+font-weight:bold;
+margin-left:25px;
+float:left;
+width:100%;
+margin-bottom:25px;
+}
+
+.device-title{
+font-size:17px;
+font-weight:bold;
+margin-left:25px;
+float:left;
+width:100%;
+margin-bottom:25px;
+margin-top:25px;
+}
+
+.value-container{
+width:100%;
+height:auto;
+flot:left;
+margin-top:15px;
+}
+
+.value-container .text{
+font-size:16px;
+width:30%;
+margin-left:20px;
+float:left;
+margin-bottom:15px;
+}
+.value-container .text-value{
+font-size:16px;
+width:65%;
+margin-bottom:15px;
+float:left;
+}
+.value-container .edit-button{
+font-size: 16px;
+margin-left: 20px;
+height: 25px;
+background-color: #000;
+color: #fff;
+border: 0;
+border-radius: 4px;
+cursor: pointer;
+float: left;
+text-align: center;
+padding-top: 5px;
+width:132px;
+}
+
+.value-container .edit-button a:link{
+font-size:16px;
+color:#fff;
+text-decoration:none;
+}
+
+.value-container .edit-button a:visited{
+font-size:16px;
+color:#fff;
+}
+.value-container .mid-text{
+float:left;
+margin-left:15px;
+margin-top: 5px;
+font-style: italic;
+}
+
+.value-container .del-button input{
+font-size: 16px;
+margin-left: 20px;
+height: 30px;
+background-color: #000;
+color: #fff;
+border: 0;
+border-radius: 4px;
+cursor: pointer;
+float: left;
+padding: 5px;
+}
+
+table.show-value{
+border: 1px solid #ddd;
+width: 100%;
+height: auto;
+text-align: center;
+float: left;
+color: #000;
+font-size: 15px;
+font-weight: normal;
+border-spacing:0px;
+}
+
+table.show-value th{
+border:1px solid #ddd;
+font-weight:lighter;
+color:#000;
+width:auto;
+word-break:break-word;
+}
+
+table.show-value td{
+border:1px solid #ddd;
+color:#756c6c;
+width:auto;
+}
+
+table.show-value td a:link{
+color:#000;
+}
+
+table.show-value td a:visited{
+color:#000;
+}
+
+table.show-value td form{
+margin:0px;
+}
+
+table.show-value td .del-button input{
+height:25px;
+background-color:#000;
+color:#fff;
+border:0;
+border-radius:4px;
+cursor:pointer;
+}
+
+table.show-value .update-button{
+font-size: 13px;
+height: 20px;
+background-color: #000;
+color: #fff;
+border: 0;
+border-radius: 4px;
+cursor: pointer;
+padding-top: 4px;
+width: 60px;
+margin-top: 2px;
+float: left;
+margin-left: 24px;
+}
+table.show-value .update-button a:link{
+color:#fff;
+text-decoration:none;
+}
+
+table.show-value .update-button a:visited, a:hover{
+color:#fff;
+text-decoration:none;
+}
+
+table.show-value .update-button a:hover{
+color:#fff;
+text-decoration:none;
+}
+
+
+input[type=submit].compare{
+font-size: 13px;
+height: 25px;
+background-color: #000;
+color: #fff;
+border: 0;
+border-radius: 4px;
+cursor: pointer;
+padding: 4px;
+width: 60px;
+float: left;
+margin-left: 32px;
+}
+
+.table-view{
+width:100%;
+height:auto;
+float:left;
+}
+
+.left-box{
+width:35%;
+float:left;
+height:auto;
+}
+
+.left-box .text{
+font-size:16px;
+width:100%;
+height:35px;
+margin-left:15px;
+float:left;
+color:#544b4b;
+font-weight:bold;
+}
+
+.right-box{
+width:30%;
+float:left;
+height:auto;
+}
+.right-box .value{
+font-size:16px;
+width:100%;
+height:35px;
+float:left;
+color:#000;
+}
+
+.right-box .value-green{
+font-size:16px;
+width:100%;
+height:35px;
+float:left;
+color:#0fbd0f;
+text-transform:lowercase;
+}
+
+.right-box .value-red{
+font-size:16px;
+width:100%;
+height:35px;
+float:left;
+color:#ff0000;
+text-transform:lowercase;
+}

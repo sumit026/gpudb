@@ -1,0 +1,76 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="styles.css" type="text/css" />
+		<meta charset="utf-8">
+		<title>View GPU</title>
+	</head>
+	<body>
+		<div class="header">
+			<h1 class="heading"> <a href="/">GPU Information</a> </h1>
+			<div class="login-logout-box">
+			<div class="user-info">
+	
+			</div>
+			<div class="login-info"><a href='{{ logout_url }}'>Logout</a></div>
+			</div>
+		</div>
+		
+		<div class="main-container">
+			<div class="menu">
+				<ul>
+ 					<li><a href="/">Add</a></li>
+  					<li><a href="/view">View</a></li>
+					<li><a href="/viewfeatures">View by Features</a></li>
+  					<li><a href="/compare">Compare</a></li>
+				</ul>
+			</div>
+			
+			<div class="device-title">Device Name - {{ name }}</div>
+			{% for i in gpu_list %}
+				{% if i.devicename == name %}
+			<div class="value-container">
+				<div class="text">devicename</div>
+				<div class="text-value">{{ i.devicename }}</div>
+
+				<div class="text">manufacturer</div>
+				<div class="text-value">{{ i.manufacturer }}</div>
+
+				<div class="text">dateissued</div>
+				<div class="text-value">{{ i.dateissued }}</div>
+
+				<div class="text">geometryShader</div>
+				<div class="text-value">{{ i.geometryShader }}</div>
+
+				<div class="text">tesselationShader</div>
+				<div class="text-value">{{ i.tesselationShader }}</div>
+
+				<div class="text">shaderInt16</div>
+				<div class="text-value">{{ i.shaderInt16 }}</div>
+
+				<div class="text">sparseBinding</div>
+				<div class="text-value">{{ i.sparseBinding }}</div>
+
+				<div class="text">textureCompressionETC2</div>
+				<div class="text-value">{{ i.textureCompressionETC2 }}</div>
+
+				<div class="text">vertexPipelineStoresAndAtomics</div>
+				<div class="text-value">{{ i.vertexPipelineStoresAndAtomics }}</div>
+				
+				<div class="edit-button"><a href="/edit?name={{ i.devicename }}">update this entry</a></div>
+				<div class="mid-text">or</div>
+				<form action="/" method="post">
+					<input type="hidden" name="index" value="{{ loop.index - 1 }}"/>
+					<div class="del-button"><input type="submit" value="delete this entry" name="button"/></div>
+				</form>
+				
+
+			</div>
+				
+				{% endif %}
+			{% endfor %}
+			
+			
+		</div>
+
+	</body>
+</html>

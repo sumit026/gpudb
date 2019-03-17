@@ -1,0 +1,62 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="styles.css" type="text/css" />
+		<meta charset="utf-8">
+		<title>Compare</title>
+	</head>
+	<body>
+		<div class="header">
+			<h1 class="heading"> <a href="/">GPU Information</a> </h1>
+			<div class="login-logout-box">
+			<div class="user-info">
+	
+			</div>
+			<div class="login-info"><a href='{{ logout_url }}'>Logout</a></div>
+			</div>
+		</div>
+		
+		<div class="main-container">
+			<div class="menu">
+				<ul>
+ 					<li><a href="/">Add</a></li>
+  					<li><a href="/view">View</a></li>
+					<li><a href="/viewfeatures">View by Features</a></li>
+  					<li><a class="active" href="/compare">Compare</a></li>
+				</ul>
+			</div>
+			<div class="view-title">Please select two GPU to compare</div>
+	
+			<table class="show-value">
+				<form method="get" action="/compareview">
+				<thead>
+					<th>devicename</th>
+					<th>manufacturer</th>
+					<th>dateissued</th>
+					<th>geometryShader</th>
+					<th>tesselationShader</th>
+					<th><input class="compare" type="submit" value="compare" /></th>
+					
+				</thead>
+				
+				
+					{% for i in gpulist %}
+				<tr>
+					<td><a href="/viewgpu?name={{ i.devicename }}">{{ i.devicename }}</a></td>
+					<td>{{ i.manufacturer }}</td>
+					<td>{{ i.dateissued }}</td>
+					<td>{{ i.geometryShader }}</td>
+					<td>{{ i.tesselationShader }}</td>
+					<td>
+						<input type="checkbox" name="compare" value="{{ i.devicename }}" />
+					</td>
+					{% endfor %}
+					
+				</tr>
+			</table>
+				
+				</form>
+			
+		</div>
+
+	</body>
+</html>
